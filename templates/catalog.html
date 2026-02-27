@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+ <!-- Боковое меню (как на изображении) -->
+    <div class="d-flex">
+        <div class="bg-dark text-white p-3 col-3">
+            <h5>Меню</h5>
+            <ul class="list-unstyled">
+                <li><a href="/" class="text-white">Главная</a></li>
+                <li><a href="/catalog" class="text-white">Категории</a></li>
+                <li><a href="/orders" class="text-white">Заказы</a></li>
+                <li><a href="/contacts" class="text-white">Контакты</a></li>
+            </ul>
+            <hr class="border-white">
+            <h6>Профиль</h6>
+            <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Выход</a></li>
+            </ul>
+            <div class="mt-3">Пользователь</div>
+        </div>
+
+        <!-- Основная часть с карточками -->
+        <div class="container mt-3 col-9">
+            <h1>Каталог</h1>
+
+            <div class="row">
+                <!-- Карточка 1 -->
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Thumbnail</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 (повторить для других товаров) -->
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Thumbnail</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Повторить блоки col-md-6 col-lg-3 для остальных карточек -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
