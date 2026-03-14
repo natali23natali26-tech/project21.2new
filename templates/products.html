@@ -1,10 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Товары{% endblock %}
+{% block content %}
+<h1>Товары</h1>
 
-</body>
-</html>
+<div class="container">
+  <!-- Первая строка с тремя товарами -->
+  <div class="row mb-4">
+    <!-- Первый товар -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Товар 1">
+        <div class="card-body">
+          <h5 class="card-title">Товар 1</h5>
+          <p class="card-text">Описание товара 1</p>
+          <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+      </div>
+    </div>
+    <!-- Второй товар -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Товар 2">
+        <div class="card-body">
+          <h5 class="card-title">Товар 2</h5>
+          <p class="card-text">Описание товара 2</p>
+          <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+      </div>
+    </div>
+    <!-- Третий товар -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Товар 3">
+        <div class="card-body">
+          <h5 class="card-title">Товар 3</h5>
+          <p class="card-text">Описание товара 3</p>
+          <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Вторая строка с тремя товарами -->
+  <div class="row">
+    <!-- Четвертый товар -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Товар 4">
+        <div class="card-body">
+          <h5 class="card-title">Товар 4</h5>
+          <p class="card-text">Описание товара 4</p>
+          <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+      </div>
+    </div>
+    <!-- Пятый товар -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Товар 5">
+        <div class="card-body">
+          <h5 class="card-title">Товар 5</h5>
+          <p class="card-text">Описание товара 5</p>
+          <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+      </div>
+    </div>
+    <!-- Шестой товар -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Товар 6">
+        <div class="card-body">
+          <h5 class="card-title">Товар 6</h5>
+          <p class="card-text">Описание товара 6</p>
+          <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
