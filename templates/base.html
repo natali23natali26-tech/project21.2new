@@ -5,6 +5,8 @@
   <title>{% block title %}Мой сайт{% endblock %}</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <style>
     body {
       display: flex;
@@ -16,6 +18,10 @@
       max-width: 250px;
       background-color: #f8f9fa;
       padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Верхняя и нижняя части */
+      height: 100vh; /* Полная высота окна */
     }
     #sidebar .nav-link {
       font-size: 1.1rem;
@@ -24,27 +30,66 @@
       flex: 1;
       padding: 2rem;
     }
+    /* Стиль для нижней части меню */
+    .sidebar-footer {
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
 
 <!-- Боковое меню -->
 <nav id="sidebar" class="d-flex flex-column">
-  <h4 class="text-center mb-4">Меню</h4>
-  <ul class="nav nav-pills flex-column mb-auto px-3">
-    <li class="nav-item">
-      <a href="/" class="nav-link {% if request.path=='/' %}active{% endif %}">Главная</a>
-    </li>
-    <li>
-      <a href="/categories" class="nav-link {% if request.path=='/categories' %}active{% endif %}">Категории</a>
-    </li>
-    <li>
-      <a href="/products" class="nav-link {% if request.path=='/products' %}active{% endif %}">Товары</a>
-    </li>
-    <li>
-      <a href="/contacts" class="nav-link {% if request.path=='/contacts' %}active{% endif %}">Контакты</a>
-    </li>
-  </ul>
+  <div>
+    <h4 class="text-center mb-4">Меню</h4>
+    <ul class="nav nav-pills flex-column mb-auto px-3">
+      <li class="nav-item">
+        <a href="/" class="nav-link {% if request.path=='/' %}active{% endif %}">
+          <i class="bi bi-house-fill me-2"></i>Главная
+        </a>
+      </li>
+      <li>
+        <a href="/categories" class="nav-link {% if request.path=='/categories' %}active{% endif %}">
+          <i class="bi bi-list-ul me-2"></i>Категории
+        </a>
+      </li>
+      <li>
+        <a href="/products" class="nav-link {% if request.path=='/products' %}active{% endif %}">
+          <i class="bi bi-bag-fill me-2"></i>Товары
+        </a>
+      </li>
+      <li>
+        <a href="/contacts" class="nav-link {% if request.path=='/contacts' %}active{% endif %}">
+          <i class="bi bi-telephone-fill me-2"></i>Контакты
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Нижний блок с Dropdown -->
+  <div class="sidebar-footer">
+    <!-- Dropdown -->
+    <div class="dropdown">
+      <a class="d-flex align-items-center text-decoration-none dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-person-circle me-2" style="font-size: 2rem;"></i>
+        <div>
+          <h6 class="mb-0">Пользователь</h6>
+          <small class="text-muted">Ваш профиль</small>
+        </div>
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="userDropdown">
+        <li>
+          <a class="dropdown-item" href="/profile">
+            <i class="bi bi-person-circle me-2"></i>Профиль
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="/logout">
+            <i class="bi bi-box-arrow-right me-2"></i>Выход
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <!-- Основной контент -->
